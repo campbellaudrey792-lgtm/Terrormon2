@@ -17,6 +17,6 @@ public class ChaseScript : MonoBehaviour
     void Update()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        rb.linearVelocity = direction * speed;
     }
 }
