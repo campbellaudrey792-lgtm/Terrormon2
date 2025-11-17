@@ -40,5 +40,7 @@ public class ChaseScript : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
             isChasing = false;
         }
+        Vector2 direction = (player.position - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
     }
 }
